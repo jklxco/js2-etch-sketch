@@ -1,6 +1,9 @@
 function createGameBoard(height = 16, width = 16, ) {
     const containerDiv = document.querySelector('.container');
     containerDiv.replaceChildren()
+
+   if (height > 100) { height = 100; }
+   if (width > 100) { width = 100; }
     
     for (i = 0; i < width; i++) {
        let rowDiv = document.createElement('div');
@@ -27,8 +30,8 @@ function addEventListener(){
 function changeGridSize(){
     const btnChangeGrid = document.getElementById('btn-change-grid')
     btnChangeGrid.addEventListener('click', function(){
-        let height = prompt('How Many Squares Tall?')
-        let width = prompt('How Many Squares Wide?')
+        let height = prompt('How Many Squares Tall? Max: 100')
+        let width = prompt('How Many Squares Wide? Max: 100')
         createGameBoard(height, width)
     })
 }
