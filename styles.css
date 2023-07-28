@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+div.container {
+    
+    display: flex
+}
+
+div.cell {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+div.hovered {
+    background-color: red;
+}
+
+div.row-div:first-child {
+    border-left: 3px solid black;
+}
+
+div.row-div:last-child {
+    border-right: 3px solid black;
+}
+
+div.row-div {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
